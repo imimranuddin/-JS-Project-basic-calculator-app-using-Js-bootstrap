@@ -1,4 +1,4 @@
-# JS Project-basic calculator app using Js bootstrap
+# JS Project basic calculator app using Js bootstrap
 Here below, I have briefly discussed how I created this calculator web app,
 
 How I used Bootstrap in the page : At first I took Bootstrap container, it has one row and inside the row, I took 5 columns. 3 columns have a width of 4 values first one is an input type number to get the first number from the user, the second one is select type to let the user select the operator and the 3rd one is again an input type number to get the 2nd number. so these 3 make a full width. then I took a submit button and gave a width of 12 values, when the user taps on it, it will answer in the next input field column I made a width of 4 values, and using offset I made it centered and also used readonly attribute so that user can’t edit the result.
