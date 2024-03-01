@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- page title  -->
+    <title>Calculator</title>
+    <style>
+        /* gave horizontal rule some width and made it centered using auto margin */
+        hr {
+            width: 40vw;
+            margin: auto !important;
+        }
+    </style>
+
+    <!-- linked bootstrap css file  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- calculator heading  -->
+    <h1 class="text-center">JavaScript Calculator</h1>
+    <!-- horizontal line  -->
+    <br>
+    <hr class="border border-secondary border-1 opacity-100 gy-5">
+    <br>
+    <!-- bootstrap container -->
+    <div class="container">
+        <!-- bootstrap row  -->
+        <div class="row gx-3 gy-2 align-items-center">
+
+            <!-- took 5 columns 3 with width value 4 so it will take full width then the button with width value 12 it takes full width in the next line then took 1 result field column width value 4 and used bootstrap offset to make centered  -->
+
+            <!-- 1st input number column  -->
+            <div class="col-sm-4 p-2">
+                <h5 class="label-txt fw-bold">Number-1</h5>
+                <input onclick="blank()" type="number" class="form-control" id="num1"
+                    placeholder="Enter the first number">
+            </div>
+
+            <!-- operator selection column  -->
+            <div class="col-sm-4 p-2">
+                <h5 class="label-txt fw-bold">Operator</h5>
+                <select onclick="blank()" class="form-select" id="optr">
+                    <option selected>Choose operator</option>
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">x</option>
+                    <option value="/">/</option>
+                </select>
+            </div>
+
+            <!-- 2nd input number column  -->
+            <div class="col-sm-4 p-2">
+                <h5 class="label-txt fw-bold">Number-2</h5>
+                <input onclick="blank()" type="number" class="form-control" id="num2"
+                    placeholder="Enter the second number">
+            </div>
+
+            <!-- submit button column  -->
+            <div class=" col-sm-12 p-2">
+                <button onclick="calculate()" type="button" class="btn btn-success w-100">Submit</button>
+            </div>
+
+            <!-- result field column -->
+            <div class="col-sm-4 offset-sm-4 p-2">
+                <h5 class="label-txt fw-bold">Answer</h5>
+                <input type="number" class="form-control" id="rslt" readonly="">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- linked local JS file  -->
+    <script src="scripts.js"></script>
+
+    <!-- linked bootstrap JS file  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
